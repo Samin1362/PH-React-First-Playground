@@ -1,12 +1,14 @@
 import './App.css'
-import Users from './components/Users'
+import Blogs from './components/Blogs/Blogs'
+import Header from './components/Header/Header'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-2xl font-bold text-center'>USER DATA</h1>
-      <Users></Users>
+      <Header></Header>
+      <div className="divider"></div>
+      <Blogs></Blogs>
     </>
   )
 }
