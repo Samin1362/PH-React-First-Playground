@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { CiBookmark } from "react-icons/ci";
 
 const Blog = ({ blog }) => {
   const {
@@ -30,11 +31,11 @@ const Blog = ({ blog }) => {
               alt=""
             />
             <div>
-              <h3>{author}</h3>
-              <h3>{posted_date}</h3>
+              <h3 className="font-bold text-2xl">{author}</h3>
+              <h3 className="font-[rgba(17, 17, 17, 0.6)] text-[16px]">{posted_date}</h3>
             </div>
           </div>
-          <div>{reading_time} min read </div>
+          <div className="flex items-center">{reading_time} min read <button className="ml-2 text-2xl"><CiBookmark></CiBookmark></button></div>
         </div>
         <h1 className="text-[40px] font-bold max-w-[737px]">{title}</h1>
         <p>
@@ -43,7 +44,7 @@ const Blog = ({ blog }) => {
           ))}
         </p>
         <div>
-          <button className="underline font-semibold">Mark as read</button>
+          <button className="underline font-semibold text-xl">Mark as read</button>
         </div>
       </div>
     </div>
