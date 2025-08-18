@@ -5,12 +5,12 @@ import Bookmarks from "./components/Bookmarks/Bookmarks";
 import { useState } from "react";
 
 function App() {
-
   const [bookmarks, setBookmarks] = useState([]);
 
   const handleAddToBookmarks = blog => {
-    console.log("Bookmark adding soon")
-  };
+    const newBookmarks = [...bookmarks, blog];
+    setBookmarks(newBookmarks);
+  }
 
   return (
     <>
@@ -18,7 +18,7 @@ function App() {
       <div className="divider"></div>
       <div className="max-w-[1280px] mx-auto flex gap-6">
         <Blogs handleAddToBookmarks = {handleAddToBookmarks}></Blogs>
-        <Bookmarks></Bookmarks>
+        <Bookmarks bookmarks = {bookmarks}></Bookmarks>
       </div>
     </>
   );
